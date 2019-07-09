@@ -6,7 +6,7 @@ const fs = require("fs");
 const JSZip = require("jszip");
 const Docxtemplater = require("docxtemplater");
 const path = require("path");
-const expressions = require("bluerider");
+const expressions = require("angular-expressions");
 
 function showHelp() {
 	console.log("Usage: docxtemplater input.docx data.json output.docx");
@@ -18,11 +18,12 @@ if (argv.help) {
 }
 
 function parser(tag) {
-	const expr = expressions.compile(tag.replace(/’/g, "'"));
 	return {
-		get(scope) {
-			return expr(scope);
-		},
+	    get: tag === '.' ? function (s) {
+		return s;
+	    } : function (s) {
+		return expressions.compile(tag.replace(/(’|“|”)/g, "'"))(s);
+	    }
 	};
 }
 
