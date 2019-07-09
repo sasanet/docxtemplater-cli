@@ -13,8 +13,8 @@
   "author": "Edgar Hipp",
   "license": "MIT",
   "dependencies": {
-    "bluerider": "^1.0.0",
-    "docxtemplater": "^3.5.2",
+    "angular-expressions": "^1.0.0",
+    "docxtemplater": "^3.9.7",
     "jszip": "^2.6.1",
     "minimist": "^1.2.0"
   }
