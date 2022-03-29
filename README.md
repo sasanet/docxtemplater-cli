@@ -9,7 +9,7 @@ Installation
 To install the cli, run :
 
 ```
-ubuntu:  sudo npm install -g https://github.com/sasanet/docxtemplater-cli
+sudo npm install -g https://github.com/sasanet/docxtemplater-cli
 ```
 
 Run
