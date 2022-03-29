@@ -15,7 +15,7 @@
   "dependencies": {
     "angular-expressions": "^1.1.5",
     "docxtemplater": "^3.29.0",
-    "lodash": "^4.17.21",
+    "ramda": "0.28.0",
     "minimist": "^1.2.5",
     "pizzip": "^3.0.6"
   },
