@@ -1,6 +1,6 @@
 {
   "name": "docxtemplater-cli",
-  "version": "3.5.2",
+  "version": "3.6.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -13,9 +13,15 @@
   "author": "Edgar Hipp",
   "license": "MIT",
   "dependencies": {
-    "angular-expressions": "^1.0.0",
-    "docxtemplater": "^3.9.7",
-    "jszip": "^2.6.1",
-    "minimist": "^1.2.0"
+    "angular-expressions": "^1.1.5",
+    "docxtemplater": "^3.29.0",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.5",
+    "pizzip": "^3.0.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.13.0",
+    "prettier": "^2.1.2"
   }
 }
