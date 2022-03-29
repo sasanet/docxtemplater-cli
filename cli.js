@@ -6,8 +6,7 @@ const fs = require("fs");
 const PizZip = require("pizzip");
 const Docxtemplater = require("docxtemplater");
 const expressions = require("angular-expressions");
-const assign = require("lodash/assign");
-const last = require("lodash/last");
+const {last} = require("ramda");
 const {addFilters} = require("./counter");
 
 
@@ -67,9 +66,9 @@ function parser(tag) {
             const scopeList = context.scopeList;
             const num = context.num;
             for (let i = 0, len = num + 1; i < len; i++) {
-                obj = assign(obj, scopeList[i]);
+                obj = Object.assign(obj, scopeList[i]);
             }
-            obj = assign(obj, { $index: index });
+            obj = Object.assign(obj, { $index: index });
 
             const result = expr(scope, obj);
             if (isAngularAssignment) {
